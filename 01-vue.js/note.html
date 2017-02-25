@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>笔记模板</title>
+</head>
+<body>
+    
+
+<div id="md-body">
+
+#  Vue.js是什么
+
+`Vue.js`是一套构建用户界面的**渐进式框架**。
+
+Vue采用自底向上增量开发的设计。
+
+Vue核心库只关注图层，并且非常容易学习，非常容易与其它库或已有项目整合。
+
+另一方面，Vue完全有能力驱动采用[单文件组件](http://cn.vuejs.org/v2/guide/single-file-components.html)和[Vue生态系统支持的库](http://github.com/vuejs/awesome-vue#libraries--plugins)开发的复杂单页应用。
+
+Vue.js目标是通过尽可能简单的API实现**响应式数据绑定**和**组合的视图组件**。
+
+点击[对比其他框架](http://cn.vuejs.org/v2/guide/comparison.html)
+
+# 起步
+
+**学习Vue.js需要有HTML、CSS和JavaScript中级前端知识**。
+
+安装Vue.js请看[安装指南](http://cn.vuejs.org/guide/installation.html)
+
+测试可以下载[开发版本](http://vuejs.org/js/vue.js)
+
+在开发版本中**遇到常见错误会给出友好的警告**。
+
+`vue-cli`构建单页面使用，**不推荐**新手直接使用，尤其对Node.js构建工具不够了解更要慎用。
+
+
+# 声明式渲染
+
+Vue.js的核心是一个允许你采用简洁的模板语法来声明式的将数据渲染进DOM的系统：
+
+```html
+<div id="app">
+	{{message}}
+</div>
+```
+
+```javascript
+var app = new Vue({
+	el:"#app",
+	data:{
+		message:"Hello Vue"
+	}
+});
+```
+
+```dos
+Hello Vue
+```
+
+如是，即生成了第一个Vue应用！
+
+现在数据和DOM已经绑定在一起，所有元素都是**响应式的**。
+
+</div>
+    
+<script src="https://YQMCU.github.io/books_study/scripts/markdown_parse.js" type="text/javascript"></script>
+
+
+</body>
+</html>
