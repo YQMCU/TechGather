@@ -9,7 +9,9 @@
 
 <div id="md-body">
 
-# Vue.js 基础
+---
+
+# 1. Vue.js 基础
 
 ---
 
@@ -341,6 +343,44 @@ Vue.js的组件语法参考了[Web组件规范](http://www.w3.org/wiki/WebCompon
 1. Web组件规范未完成，浏览器还并不支持。相比之下，Vue.js组件不需要补丁。必要时，Vue.js组件也可以放在原生自定义元素之内。
 2. Vue.js组件提供了原生自定义元素所不具备的一些重要功能，比如组件间数据流，自定义事件系统，以及动态的、带特效的组件替换。
 
+---
+
+# 2. Vue 实例
+
+---
+
+## 构造器
+
+每个Vue.js应用都是通过构造函数`Vue()`创建一个**Vue的根实例**启动的：
+
+```js
+var vm = new Vue({
+	
+});
+```
+
+虽然没有完全遵循[MVVM模式](https://en.wikipedia.org/wiki/Model_View_ViewModel)，但受到了它的启发。
+
+在实例化Vue时，需要传入一个**选项对象**，他可以包含**数据**`data`，**模板**`template`，**挂载元素**`el`，**方法**`method`，**生命周期钩子**等选项。全部的选项见[API文档](http://cn.vuejs.org/v2/api)
+
+可以扩展`Vue构造器`,从而用预定义选项创建可复用的**组件构造器**。
+
+```js
+var MyComponent = Vue.extend({
+	//扩展选项
+});
+
+// 所有的 MyComponent 实例都将以预定义的扩展选项被创建
+var myComponentInstance = new MyComponent();
+```
+
+多数情况下建议将组件构造器**注册**为一个自定义元素，然后再**声明式**用在模板中。
+
+所以所有的Vue.js组件都是被扩展的Vue实例。
+
+详情可查阅[组件系统](http://cn.vuejs.org/guide/components.html)
+
+## 属性与方法
 
 
 
