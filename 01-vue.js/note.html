@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>笔记模板</title>
+    <title>Vue.js初步接触</title>
 </head>
 <body>
     
@@ -111,6 +111,82 @@ var app2 = new Vue({
 再次输入`app2.message = "some new message"`就会再次看到title属性的已经进行了更新。
 
 
+# 条件与循环
+
+控制切换一个元素的显示：
+
+示例`third_demo.html'如下：
+
+```html
+<div id="app-3">
+	<p v-if="seen">Now you see me</p>
+</div>
+```
+
+```javascript
+var app3 = new Vue({
+	el:"#app-3",
+	data:{
+		seen:true
+	}
+});
+```
+
+返回结果：
+
+```dos
+Now you see me
+```
+
+如果在控制台设置`app3.seen = false`，div就消失了。
+
+
+上述例子演示了vue.js不仅可以绑定DOM文本到数据，也可以绑定DOM**结构**到数据。
+
+而且vue.js也提供一个强大的过渡效果系统，可以在vue插入/删除元素时自动应用
+
+[过渡效果](http://cn.vuejs.org/v2/guide/transitions.html)
+
+[管理过渡状态](http://cn.vuejs.org/v2/guide/transitioning-state.html)
+
+除了`v-if`还有其他指令，比如`v-for`指令可以绑定数据到数组来渲染一个列表。
+
+```html
+<div id="app-4">
+	<ol>
+		<li v-for="todo in todos">
+			{{todo.text}}
+		</li>
+	</ol>
+</div>
+```
+
+```javascript
+var app4 = new Vue({
+	el:"#app-4",
+	data:{
+		todos:[
+			{text:'Learn JavaScript'},
+			{text:'Learn Vue'},
+			{text:'Build something awesome'}
+		]
+	}
+});
+```
+
+返回结果：
+
+```dos
+1.Learn JavaScript
+2.Learn Vue
+3.Build something awesome
+```
+
+在控制台输入`app4.todos.push({text:Learn Python})`，会发现列表会多一条。
+
+同样，如果`app4.todos.pop()`，列表会清空最后一条。
+
+如是观之，vue.js将DOM文本和Vue数据动态捆绑在了一起，并且可以**像操作JavaScript中的数组一样操作**。
 
 </div>
     
