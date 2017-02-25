@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vue.js初步接触</title>
+    <title>Vue.js学习记录</title>
 </head>
 <body>
     
 
 <div id="md-body">
 
-#  Vue.js是什么
+# Vue.js 基础
+
+---
+
+##  Vue.js是什么
 
 `Vue.js`是一套构建用户界面的**渐进式框架**。
 
@@ -23,7 +27,7 @@ Vue.js目标是通过尽可能简单的API实现**响应式数据绑定**和**�
 
 点击[对比其他框架](http://cn.vuejs.org/v2/guide/comparison.html)
 
-# 起步
+## 起步
 
 **学习Vue.js需要有HTML、CSS和JavaScript中级前端知识**。
 
@@ -42,7 +46,7 @@ BootStrap中文网 CDN服务 : [//cdn.bootcss.com/vue/2.1.10/vue.js](//cdn.bootc
 `vue-cli`构建单页面使用，**不推荐**新手直接使用，尤其对Node.js构建工具不够了解更要慎用。
 
 
-# 声明式渲染
+## 声明式渲染
 
 Vue.js的核心是一个允许你采用简洁的模板语法来声明式的将数据渲染进DOM的系统：
 
@@ -115,7 +119,7 @@ var app2 = new Vue({
 再次输入`app2.message = "some new message"`就会再次看到title属性的已经进行了更新。
 
 
-# 条件与循环
+## 条件与循环
 
 控制切换一个元素的显示：
 
@@ -193,7 +197,7 @@ var app4 = new Vue({
 如是观之，vue.js将DOM文本和Vue数据动态捆绑在了一起，并且可以**像操作JavaScript中的数组一样操作**。
 
 
-# 处理用户输入
+## 处理用户输入
 
 `v-on`指令可以**绑定一个监听事件**用于**调用**Vue实例中定义的**方法**。
 
@@ -245,6 +249,99 @@ var app6 = new Vue({
 ```
 
 上述例子中，当输入内容后，p标签内容相应改变。
+
+
+## 用组件构建（应用）
+
+组件系统是Vue.js另一个重要概念，因为它提供了一种抽象，让开发者可以用独立可复用的小组件来构建大型应用。
+
+如果考虑这点，几乎任意类型的应用的界面都可以抽象为一个组件树。
+
+![Vue组件系统](http://cn.vuejs.org/images/components.png "Vue组件树")
+
+在Vue里，一个**组件**实质上**是**一个拥有预定义选项的一个**Vue实例**：
+
+```javascript
+// Define a new component called todo-item
+Vue.component('todo-item',{
+	// The todo-item component now accepts a 
+	// "prop",which is like a custom attribute.
+	// This prop is called todo.
+	props:['todo'],
+	template:'<li>{{ todo.text }}</li>'
+})
+```
+
+上例创建一个可以接受名为`todo`的参数的组件`todo-item`。
+
+完整组件示例`seventh.html`如下：
+
+```html
+<div id="app-7">
+	<ol>
+		<!-- Now we provide each todo-item with the todo object -->
+		<!-- it's representing,so that its content can be dynamic -->
+		<todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+	</ol>
+</div>
+```
+
+```js	
+Vue.component('todo-item',{
+	props:['todo'],
+	template:'<li>{{todo.text}}</li>'
+});
+
+var app7 = new Vue({
+	el:"#app-7",
+	data:{
+		groceryList:[
+			{text:'Vegetables'},
+			{text:'Cheese'},
+			{text:'Whatever else humans are supposed to eat'}
+		]
+	}
+});
+```
+
+返回结果：
+
+```
+1.Vegetables
+2.Cheese
+3.Whatever else humans are supposed to eat
+```
+
+上述例子将应用分割成两个更小的单元，子元素通过`props`接口实现了与父元素很好的解耦。
+
+从而在不影响到父应用的基础上，进一步为`todo`组件改进更多更为复杂的模块和逻辑。
+
+在一个大型应用中，为了使得开发过程可控，有必要将应用整体分割为一个个组件。
+
+在[后面的教程](http://cn.vuejs.org/v2/guide/components.html)中，将详述组件。
+
+下面展现应用模板的示例如下：
+
+```html
+<div id="app">
+	<app-nav></app-nav>
+	<app-view>
+		<app-sidebar></app-sidebar>
+    	<app-content></app-content>
+	</app-view>
+</div>
+```
+
+## 与自定义元素的关系
+
+Vue.js的组件语法参考了[Web组件规范](http://www.w3.org/wiki/WebComponents/)的**自定义元素**内容。
+
+但是也有着几个关键不同：
+
+1. Web组件规范未完成，浏览器还并不支持。相比之下，Vue.js组件不需要补丁。必要时，Vue.js组件也可以放在原生自定义元素之内。
+2. Vue.js组件提供了原生自定义元素所不具备的一些重要功能，比如组件间数据流，自定义事件系统，以及动态的、带特效的组件替换。
+
+
 
 
 </div>
