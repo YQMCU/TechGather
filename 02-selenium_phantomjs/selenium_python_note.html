@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selenium-python translation</title>
+</head>
+<body>
+    
+
+<div id="md-body">
+
+[TOC]
+
+Translate from [selenium-python Documents](http://selenium-python.readthedocs.io/installation.html)
+
+---
+
+# 1. Installation
+
+# 1. 安装
+
+---
+
+---
+
+## 1.1 Introduction
+
+## 1.1 介绍 
+
+---
+
+Selenium Python bindings provides a simple API to write functional/acceptance tests using Selenium WebDriver. Through Selenium Python API you can access all functionalities of Selenium WebDriver in an intuitive way.
+
+[Selenium Python](http://pypi.python.org/pypi/selenium)包提供一个简单API用`Selenium WebDriver`来编写功能测试和验收测试。
+
+	英文速记：functional/acceptance tests : 功能/验收测试
+
+---
+
+Selenium Python bindings provide a convenient API to access Selenium WebDrivers like Firefox, Ie, Chrome, Remote etc. The current supported Python versions are 2.7, 3.5 and above.
+
+[Selenium Python](http://pypi.python.org/pypi/selenium)包提供了一个方便的API来访问Selenium网页驱动器，诸如FF,IE,Chrome,远程协议等等。当前支持的Python版本是2.7，3.5及更高。
+
+	英文速记：access : 访问
+
+**笔者补充**：
+
+* Remote表示Selenium构建其他类浏览器的网页驱动器实例，用于完成网页功能测试等应用。比如[PhantomJS](http://phantomjs.org/)，基于**Google V8**引擎的服务端浏览器等。
+
+---
+
+This documentation explains Selenium 2 WebDriver API. Selenium 1 / Selenium RC API is not covered here.
+
+本文涵盖了`Selenium 2 WebDriver API`。Selenium 1 或者 Selenium RC API 不包含在此。
+
+---
+
+## 1.2 Downloading Python bindings for Selenium
+
+## 1.2 下载Selenium Python包
+
+---
+
+You can download Python bindings for Selenium from the PyPI page for selenium package. However, a better approach would be to use pip to install the selenium package. Python 3.6 has pip available in the standard library. Using pip, you can install selenium like this:
+
+你可以下载Selenium Python包从[PyPI页面](http://pypi.python.org/pypi/selenium)。然而，一个更好的途径是用pip命令安装selenium包。在Python 3.6的标准库中可用pip。使用pip安装selenium如此：
+
+```
+pip install selenium
+```
+
+```
+英文速记：approach : 途径、方法
+```
+
+---
+
+You may consider using virtualenv to create isolated Python environments. Python 3.6 has pyvenv which is almost same as virtualenv.
+
+你可能考虑使用虚拟环境来创建单独的Python环境。Python 3.6有和`virtualenv`(虚拟环境)一样的`pyvenv`命令工具。
+
+	英文速记：isolated : 单独的、孤立的(被动语态)
+
+---
+
+## 1.3 Driver
+
+## 1.3 驱动器
+
+---
+
+Selenium requires a driver to interface with the chosen browser. Firefox, for example, requires geckodriver, which needs to be installed before the below examples can be run. Make sure it’s in your PATH, e. g., place it in /usr/bin or /usr/local/bin.
+
+Selenium需要一个驱动器作为被选择浏览器的接口。比如说，火狐，需要`geckodriver`驱动器，gechodriver需要在一下例子运行时提前被安装。并且确保他们在你的系统环境变量中。例如，将它放置在`/usr/bin`或者`/usr/local/bin`中。
+
+	英文速记 ： 
+		interface : 接口，界面
+		make sure : 确保
+
+**笔者补充**：
+
+* 此处说需要一个驱动器的意思是，虽然可能在开发者的系统中已经安装了诸如火狐、IE、Chrome等等浏览器，但是，开发者想要通过selenium和系统中的浏览器交互的话，仍然需要一个中间件来完成。例如，开发者想要建立一个Firefox的浏览器模型的话，就要先安装`geckodriver`。
+
+* `/usr/bin`这种是Linux,Mac系统下的文件路径表示法
+
+---
+
+Failure to observe this step will give you an error selenium.common.exceptions.WebDriverException: Message: ‘geckodriver’ executable needs to be in PATH.
+
+不遵守此步骤（**首先安装驱动器中间件**）的话，会给你一个selenium错误。
+
+程序执行后异常内容如下：
+	
+	common.exceptions.WebDriverException:
+	Message:'geckodriver' executable needs to be in PATH
+
+	英文速记 ： 
+		observe : 遵守 观察
+		exception : 异常(编程语言中用于bug类)
+
+**笔者补充**：
+
+* 错误的含义是：selenium公共异常类中的网页驱动器异常(selenium.common.exceptions.WebDriverException)，异常显示信息是，'geckodriver'在系统环境中不可以被执行。
+* 看到上述提示，就是叫开发者将诸如'geckodriver'，信息中指定的驱动器安装在系统环境中。
+
+---
+
+Other supported browsers will have their own drivers available. Links to some of the more popular browser drivers follow.
+
+其他受到支持的浏览器会有他们自己可用的驱动器。一些较为受欢迎的浏览器驱动器信息链接如下。
+
+
+|Browser|地址|
+|:-----:|:-----:|
+|Chrome:|https://sites.google.com/a/chromium.org/chromedriver/downloads
+|Edge:	|https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+|Firefox:	|https://github.com/mozilla/geckodriver/releases
+|Safari:	|https://webkit.org/blog/6900/webdriver-support-in-safari-10/
+
+---
+
+## 1.4. Detailed instructions for Windows users
+
+## 1.4 给Windows用户使用的详细指令
+
+---
+
+```
+Note
+You should have internet connection to perform this installation.
+```
+
+```
+注意
+你需要有联网才能执行这个安装操作。
+```
+
+---
+
+1. Install Python 3.6 using the MSI available in python.org download page.
+2. Start a command prompt using the cmd.exe program and run the pip command as given below to install selenium.
+
+1. 使用 [python.org](python.org)的`msi`格式的可执行文件安装 `Python 3.6`
+2. 使用`cmd.exe`程序打开命令提示框，在命令行中运行`pip`命令如下来安装`selenium`
+
+	C:\Python35\Scripts\pip.exe install selenium
+
+---
+
+Now you can run your test scripts using Python. For example, if you have created a Selenium based script and saved it inside C:\my_selenium_script.py, you can run it like this:
+
+现在你可以使用Python运行你的测试脚本程序了。例如，如果你已经创建了一个基于selenium的脚本并且将它保存在`C:\my_selenium_script.py`，你可以使用如下指令运行它:
+
+	C:\Python35\python.exe C:\my_selenium_script.py
+
+---
+
+## 1.5. Downloading Selenium server
+
+## 下载Selenium服务器
+
+---
+
+```
+Note
+The Selenium server is only required, if you want to use the remote WebDriver. See the Using Selenium with remote WebDriver section for more details. If you are a beginner learning Selenium, you can skip this section and proceed with next chapter.
+```
+
+```
+注意
+如果你想要使用远程网页驱动器，Selenium服务器是必须的。查看[Using Selenium with remote WebDriver](http://selenium-python.readthedocs.io/getting-started.html#selenium-remote-webdriver,"使用Selenium远程网页驱动器")获取更多详情。如果你是一个Selenium初学者，你可以跳过这个小节内容开始下一章节。
+```
+
+	英文速记 ： 
+		detail : 细节，详情
+		proceed : 开始
+	
+---
+
+Selenium server is a Java program. Java Runtime Environment (JRE) 1.6 or newer version is recommended to run Selenium server.
+
+selenium服务是一个Java程序。推荐使用Java运行环境(JRE)1.6或者更新版本运行Selenium服务程序。
+
+	英文速记 ：
+		runtime : 执行时间，运行时间
+		recommended : 被推荐的(被动语态)
+
+---
+
+You can download Selenium server 2.x from the download page of selenium website. The file name should be something like this: selenium-server-standalone-2.x.x.jar. You can always download the latest 2.x version of Selenium server.
+
+你可以从selenium网站下载`Selenium server 2.x`版本。这个文件的名字可能是这样的：`selenium-server-standalone-2.x.x.jar`。你可以~总是~随时下载最新的2.x版本的Selenium server程序。
+
+---
+
+If Java Runtime Environment (JRE) is not installed in your system, you can download the JRE from the Oracle website. If you are using a GNU/Linux system and have root access in your system, you can also use your operating system instructions to install JRE.
+
+如果Java运行环境没有被安装在你的系统中，你可以从[Oracle官网](http://www.oracle.com/technetwork/java/javase/downloads/index.html)下载JRE。如果你正在使用的是开源Linux系统并且有**root系统访问权限**，你也可以用你的操作系统指令来安装JRE。
+
+---
+
+If java command is available in the PATH (environment variable), you can start the Selenium server using this command:
+
+如果Java命令已经被添加在你的系统环境变量中，你可以启动Selenium服务器使用下述命令：
+
+	java -jar selenium-server-standalone-2.x.x.jar
+
+---
+
+Replace 2.x.x with actual version of Selenium server you downloaded from the site.
+
+命令中用你从站点上下载的实际的Selenium服务器程序版本号取代**2.x.x**命令字样。
+
+---
+
+If JRE is installed as a non-root user and/or if it is not available in the PATH (environment variable), you can type the relative or absolute path to the java command. Similarly, you can provide relative or absolute path to Selenium server jar file. Then, the command will look something like this:
+
+
+如果你的JRE不是被有root权限的用户，或者不是被添加在系统环境变量中的，你可以输入相对或者绝对路径给Java命令。类似的，你可以提供Selenium服务器jar包文件的绝对或者相对的文件路径。然后，这个命令会看起来像这样：
+
+	/path/to/java -jar /path/to/selenium-server-standalone-2.x.x.jar
+
+---
+
+</div>
+    
+<!-- <script src="https://YQMCU.github.io/books_study/scripts/markdown_parse.js" type="text/javascript"></script> -->
+
+<script src="http://localhost:8088\books_study\scripts\markdown_parse.js" type="text/javascript"></script>
+
+<!-- 
+<script type="text/javascript">
+	var s = document.createElement("script");
+	if(window.navigator.onLine){
+		s.src = "https://YQMCU.github.io/books_study/scripts/markdown_parse.js";
+	}else{
+		s.src = "localhost:8088\books_study\scripts\markdown_parse.js"
+	}
+	document.body.insertBefore(s,document.getElementsByTagName("script")[0]);
+</script>
+ -->
+
+</body>
+</html>
