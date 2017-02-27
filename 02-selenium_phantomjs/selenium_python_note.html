@@ -422,11 +422,252 @@ driver.close()
 
 Selenium is mostly used for writing test cases. The selenium package itself doesn’t provide a testing tool/framework. You can write test cases using Python’s unittest module. The other options for a tool/framework are py.test and nose.
 
-In this chapter, we use unittest as the framework of choice. Here is the modified example which uses unittest module. This is a test for python.org search functionality:
+Selenium通常被用来写测试案例。Selenium包自身不提供测试工具或框架。你可以用Python的`unittest`单元测试模块写测试案例。其他对于工具或者框架的选择是`py.test`和`nose`。
+
+	英文速记 ： mostly ： 主要，通常，多半
 
 ---
 
+In this chapter, we use unittest as the framework of choice. Here is the modified example which uses unittest module. This is a test for python.org search functionality:
 
+
+本章中，我们将使用`unittest`作为框架的选择。这里有一个使用`unittest`模块的改动后的例子，是`python_org_search`的功能版示例：
+
+```python
+import unittest
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+class PythonOrgSearch(unittest.TestCase):
+
+    
+    def setUp(self):
+        phantomjs_path = r'D:\2017-02-22\desktop20170222\69xe\node_modules\phantomjs-2.1.1-windows\bin\phantomjs.exe'
+        self.driver = webdriver.PhantomJS(executable_path=phantomjs_path)
+
+    def test_search_in_python_org(self):
+        driver = self.driver
+        driver.get("http://localhost:8088/gather/02-selenium_phantomjs/selenium_python_note.html")
+        self.assertIn("Python", driver.title)
+        elem = driver.find_element_by_name("q")
+        elem.send_keys("pycon")
+        elem.send_keys(Keys.RETURN)
+        assert "No results found." not in driver.page_source
+
+
+    def tearDown(self):
+        self.driver.close()
+
+if __name__ == "__main__":
+    unittest.main()
+```
+
+---
+
+You can run the above test case from a shell like this:
+
+你可以运行上面的测试样例像这样：
+
+```python
+python test_python_org_search.py
+
+----------------------------------------------------------------------
+Ran 1 test in 15.566s
+
+OK
+```
+
+---
+
+The above result shows that the test has been successfully completed.
+
+以上结果显示了这个测试脚本已经成功完成。
+
+---
+
+## 2.4. Walk through of the example
+
+## 2.4 遍览例子
+
+---
+
+Initially, all the basic modules required are imported. The unittest module is a built-in Python based on Java’s JUnit. This module provides the framework for organizing the test cases. The selenium.webdriver module provides all the WebDriver implementations. Currently supported WebDriver implementations are Firefox, Chrome, Ie and Remote. The Keys class provide keys in the keyboard like RETURN, F1, ALT etc.
+
+起初，所有的基础模块需要引入进来。`unittest`模块是Python预编译的模块，基于Java的JUnit编写。这个模块提供了一个操作测试用例的框架。`selenium.webdriver`模块提供了网页驱动器的实现。当前支持的网页驱动器有火狐，Chrome，IE和远程的一些网页驱动程序。按键类提供了键盘上的按键，比如RETURN，F1，ALT等。
+
+```python
+import unittest
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+```
+
+---	
+
+The test case class is inherited from unittest.TestCase. Inheriting from TestCase class is the way to tell unittest module that this is a test case:
+
+这个测试用例类继承自`unittest.TestCase`.继承TestCase类是告诉`unittest`模块这是一个测试案例的方法。
+
+	class PythonOrgSearch(unittest.TestCase):
+
+---
+
+The setUp is part of initialization, this method will get called before every test function which you are going to write in this test case class. Here you are creating the instance of **PhantomJS** WebDriver.
+
+`setUp`是初始化的一部分，这个方法会在每个你正在写入测试用例类的测试函数之前被调用。此处，你正在创建一个**PhantomJS**网页驱动器实例。
+
+```python
+def setUp(self):
+        phantomjs_path = r'D:\2017-02-22\desktop20170222\69xe\node_modules\phantomjs-2.1.1-windows\bin\phantomjs.exe'
+        self.driver = webdriver.PhantomJS(executable_path=phantomjs_path)
+```
+
+---
+
+This is the test case method. The test case method should always start with characters test. The first line inside this method create a local reference to the driver object created in setUp method.
+
+这是测试用例的一个方法。测试用例的方法总是以字符`test`开头。方法的第一行是创建一个局部变量驱动器关联在`setUp`方法中创建的驱动器对象。
+
+```python
+def test_search_in_python_org(self):
+    driver = self.driver
+```
+
+---
+
+The driver.get method will navigate to a page given by the URL. WebDriver will wait until the page has fully loaded (that is, the “onload” event has fired) before returning control to your test or script. It’s worth noting that if your page uses a lot of AJAX on load then WebDriver may not know when it has completely loaded.:
+
+`driver.get`方法将模拟一个URL指引的页面。网页驱动器将等到页面完全被加载（那样，"onload"事件被激活）后，返回控制给你的测试程序或者脚本。**如果你的页面在加载时使用了许多的AJAX是不值得的，这样的话驱动器可能不会知道它何时完全加载了**
+
+	driver.get("http://www.python.org")
+
+---
+
+The next line is an assertion to confirm that title has “Python” word in it:
+
+下一行是一句断言来确认网页标题中有"Python"关键字
+
+	self.assertIn("Python", driver.title)
+
+---
+
+WebDriver offers a number of ways to find elements using one of the find_element_by_* methods. For example, the input text element can be located by its name attribute using find_element_by_name method. Detailed explanation of finding elements is available in the Locating Elements chapter:
+
+网页驱动器提供了一些类似`find_element_by_*`方法来寻找元素。例如，可以使用`find_element_by_name`方法，通过`name`属性找到输入框元素。详细的关于查找元素的方法说明在[Locating Elements](http://selenium-python.readthedocs.io/locating-elements.html#locating-elements)章节。
+
+	elem = driver.find_element_by_name("q")
+
+---
+
+Next we are sending keys, this is similar to entering keys using your keyboard. Special keys can be send using Keys class imported from selenium.webdriver.common.keys:
+
+下一步，我们像按键盘按钮一样，发送按键指令。特殊按键可以从`selenium.webdriver.common.keys`按键类中导入后发送。
+
+```python
+elem.send_keys("pycon")
+elem.send_keys(Keys.RETURN)
+```
+
+---
+
+After submission of the page, you should get result as per search if there is any. To ensure that some results are found, make an assertion:
+
+提交这个页面后，你可能会得到结果。为确保没有值被找到，做一个断言。
+
+	assert "No results found." not in driver.page_source
+
+---
+
+The tearDown method will get called after every test method. This is a place to do all cleanup actions. In the current method, the browser window is closed. You can also call quit method instead of close. The quit will exit the entire browser, whereas close will close a tab, but if it is the only tab opened, by default most browser will exit entirely.:
+
+`tearDown`方法将在每个测试方法完成之后被调用。这是一个清理活动的位置。在当前方法里，浏览器窗口已经被关闭。你也可以调用`quit`方法代替`close`。`quit`将退出整个浏览器，而`close`将关闭一个选项卡，但是，如果只有一个选项卡被打开，大部分浏览器默认都会完全退出。
+
+```python
+def tearDown(self):
+    self.driver.close()
+```
+
+---
+
+Final lines are some boiler plate code to run the test suite:
+
+最后是运行测试组件的样板代码：
+
+英文速记 ： 
+	boiler ： 锅炉
+	plate ： 钢板，金属板
+	boilerplate code ： 样板代码
+
+```python
+if __name__ == "__main__":
+    unittest.main()
+```
+
+---
+
+## 2.5. Using Selenium with remote WebDriver
+
+## 2.5  远程网页驱动器使用Selenium
+
+---
+
+To use the remote WebDriver, you should have Selenium server running. To run the server, use this command:
+
+为了使用远程网页驱动器，你应该先让selenium服务器运行起来。用下面的命令运行服务器：
+
+	java -jar selenium-server-standalone-2.x.x.jar
+
+---
+
+While running the Selenium server, you could see a message looking like this:
+
+当selenium服务器运行时，你可以看到信息如下：
+
+	15:43:07.541 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+
+---
+
+The above line says that you can use this URL for connecting to remote WebDriver. Here are some examples:
+
+以上内容说明你可以使用这个URL来连接远程网页驱动器。这有一些例子：
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
+driver = webdriver.Remote(
+   command_executor='http://127.0.0.1:4444/wd/hub',
+   desired_capabilities=DesiredCapabilities.CHROME)
+
+driver = webdriver.Remote(
+   command_executor='http://127.0.0.1:4444/wd/hub',
+   desired_capabilities=DesiredCapabilities.OPERA)
+
+driver = webdriver.Remote(
+   command_executor='http://127.0.0.1:4444/wd/hub',
+   desired_capabilities=DesiredCapabilities.HTMLUNITWITHJS)
+```
+
+---
+
+The desired capabilities is a dictionary, so instead of using the default dictionaries, you can specify the values explicitly:
+
+`desired_capabilities`是一个字典，代替默认的字典，你可以明确指定值。
+
+	英文速记 ：
+		desired ： 渴望的
+		capability ： 能力
+		explicitly ： 明确地，明白地
+		specify ： 指定，详细说明，列举
+
+```python
+driver = webdriver.Remote(
+   command_executor='http://127.0.0.1:4444/wd/hub',
+   desired_capabilities={'browserName': 'htmlunit',
+                         'version': '2',
+                        'javascriptEnabled': True})
+```
+
+---
 
 </div>
     
