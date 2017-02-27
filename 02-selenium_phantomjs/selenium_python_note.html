@@ -51,7 +51,9 @@ Selenium Python bindings provide a convenient API to access Selenium WebDrivers 
 
 This documentation explains Selenium 2 WebDriver API. Selenium 1 / Selenium RC API is not covered here.
 
-本文涵盖了`Selenium 2 WebDriver API`。Selenium 1 或者 Selenium RC API 不包含在此。
+本文解说了`Selenium 2 WebDriver API`。Selenium 1 或者 Selenium RC API 不包含在此。
+
+	英文速记：explain : 解释，说明(动词)
 
 ---
 
@@ -176,7 +178,7 @@ Now you can run your test scripts using Python. For example, if you have created
 
 ## 1.5. Downloading Selenium server
 
-## 下载Selenium服务器
+## 1.5 下载Selenium服务器
 
 ---
 
@@ -239,6 +241,12 @@ If JRE is installed as a non-root user and/or if it is not available in the PATH
 
 	/path/to/java -jar /path/to/selenium-server-standalone-2.x.x.jar
 
+```
+英文速记：Similarly : 相似地，类似地
+```
+
+
+
 ---
 
 # 2. Getting Started
@@ -249,7 +257,7 @@ If JRE is installed as a non-root user and/or if it is not available in the PATH
 
 ---
 
-## 2.1 Simple Usage
+## 2.1. Simple Usage
 
 ## 2.1 简单用例
 
@@ -282,15 +290,150 @@ driver.close()
 
 * 由于笔者安装的是PhontomJS作为浏览器的，所以并未修改了源码使用火狐的例子。
 
+---
+
+The above script can be saved into a file (eg:- python_org_search.py), then it can be run like this:
+
+以上脚本可以保存为`python_org_search.py`文件，然后如是运行它。
+
+	python python_org_search.py
+
+---
+
+The python which you are running should have the selenium module installed.
+
+你正在运行的Python需要已经安装selenium模块。
+
+---
+
+## 2.2. Example Explained
+
+## 2.2 例子说明
+
+---
+
+The selenium.webdriver module provides all the WebDriver implementations. Currently supported WebDriver implementations are Firefox, Chrome, IE and Remote. The Keys class provide keys in the keyboard like RETURN, F1, ALT etc.
+
+这个`selenium.webdriver`模块提供了所有的网页驱动器实现。当前被支持的网页驱动器实现是火狐，Chrome，IE和远程的浏览器服务程序。这里的按键类提供了在键盘上的按键，诸如RETURN返回键，F1键，ALT转换键等。
+
+	英文速记：implementation : [计]实现，履行
+
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+```
+
+---
+
+Next, the instance of Firefox WebDriver is created.
+
+下一步，创建一个PhantomJS网页驱动器实例
+
+```python
+phantomjs_path = r'D:\2017-02-22\desktop20170222\69xe\node_modules\phantomjs-2.1.1-windows\bin\phantomjs.exe'
+driver = webdriver.PhantomJS(executable_path=phantomjs_path)
+```
+
+---
+
+The driver.get method will navigate to a page given by the URL. WebDriver will wait until the page has fully loaded (that is, the “onload” event has fired) before returning control to your test or script. It’s worth noting that if your page uses a lot of AJAX on load then WebDriver may not know when it has completely loaded.:
+
+`driver.get`方法将模拟一个URL指引的页面。网页驱动器将等到页面完全被加载（那样，"onload"事件被激活）后，返回控制给你的测试程序或者脚本。**如果你的页面在加载时使用了许多的AJAX是不值得的，这样的话驱动器可能不会知道它何时完全加载了**
+
+	英文速记：
+		navigate : 驾驶，操纵，模拟
+		fired : 被激发，被激活[意译]
+		be worth doing... : 值得做...
+
+```python
+driver.get("http://www.python.org")
+```
+
+---
+
+The next line is an assertion to confirm that title has “Python” word in it:
+
+下一行是一句断言来确认网页标题中有"Python"关键字
+
+```
+英文速记：assertion ： 断言，声明，主张，要求
+```
+
+	assert "Python" in driver.title
+
+---
+
+WebDriver offers a number of ways to find elements using one of the `find_element_by_*` methods. For example, the input text element can be located by its name attribute using find_element_by_name method. Detailed explanation of finding elements is available in the Locating Elements chapter:
+
+网页驱动器提供了一些类似`find_element_by_*`方法来寻找元素。例如，可以使用`find_element_by_name`方法，通过`name`属性找到输入框元素。详细的关于查找元素的方法说明在[Locating Elements](http://selenium-python.readthedocs.io/locating-elements.html#locating-elements)章节。
+
+	elem = driver.find_element_by_name("q")
+
+---
+
+Next we are sending keys, this is similar to entering keys using your keyboard. Special keys can be sent using Keys class imported from selenium.webdriver.common.keys. To be safe, we’ll first clear any prepopulated text in the input field (e.g. “Search”) so it doesn’t affect our search results:
+
+下一步，我们像按键盘按钮一样，发送按键指令。特殊按键可以从`selenium.webdriver.common.keys`按键类中导入后发送。保险起见，我们首先清除任何预先填充在输入区域的文本（例如，“Search”），这样，就不会影响我们的搜索结果了。
+
+	英文速记：
+		prepopulated ： 预先被放置于
+		field ： 区域
+
+```python
+elem.clear()
+elem.send_keys("pycon")
+elem.send_keys(Keys.RETURN)
+```
+
+---
+
+After submission of the page, you should get the result if there is any. To ensure that some results are found, make an assertion:
+
+提交这个页面后，你可能会得到结果。为确保没有值被找到，做一个断言。
+
+	英文速记 ： ensure ：　保证，确保，使安全
+
+```python
+assert "No results found." not in driver.page_source
+```
+
+---
+
+Finally, the browser window is closed. You can also call quit method instead of close. The quit will exit entire browser whereas close` will close one tab, but if just one tab was open, by default most browser will exit entirely.:
+
+最后，浏览器窗口关闭。你也可以使用`quit`方法来替代`close`方法。**`quit`将退出整个浏览器，而`close`将关闭一个选项页**，但是如果只打开了一个选项页，默认的浏览器也会完全退出。
+
+	英文速记 ： 
+		entire ： 全部，整个
+		entirely ： 完全地，彻底地
+
+```python
+driver.close()
+```
+
+---
+
+## 2.3. Using Selenium to write tests
+
+## 2.3 使用Selenium写测试程序
+
+---
+
+Selenium is mostly used for writing test cases. The selenium package itself doesn’t provide a testing tool/framework. You can write test cases using Python’s unittest module. The other options for a tool/framework are py.test and nose.
+
+In this chapter, we use unittest as the framework of choice. Here is the modified example which uses unittest module. This is a test for python.org search functionality:
+
+---
 
 
 
 </div>
     
-<script src="https://YQMCU.github.io/books_study/scripts/markdown_parse.js" type="text/javascript"></script>
-
-<!-- <script src="http://localhost:8088\books_study\scripts\markdown_parse.js" type="text/javascript"></script>
+<!-- <script src="https://YQMCU.github.io/books_study/scripts/markdown_parse.js" type="text/javascript"></script>
  -->
+<script src="http://localhost:8088\books_study\scripts\markdown_parse.js" type="text/javascript"></script>
+
 <!-- 
 <script type="text/javascript">
 	var s = document.createElement("script");
