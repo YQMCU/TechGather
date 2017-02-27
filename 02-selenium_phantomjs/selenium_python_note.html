@@ -111,8 +111,7 @@ Failure to observe this step will give you an error selenium.common.exceptions.W
 
 程序执行后异常内容如下：
 	
-	common.exceptions.WebDriverException:
-	Message:'geckodriver' executable needs to be in PATH
+	WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
 
 	英文速记 ： 
 		observe : 遵守 观察
@@ -241,6 +240,50 @@ If JRE is installed as a non-root user and/or if it is not available in the PATH
 	/path/to/java -jar /path/to/selenium-server-standalone-2.x.x.jar
 
 ---
+
+# 2. Getting Started
+
+# 2. 开始
+
+---
+
+---
+
+## 2.1 Simple Usage
+
+## 2.1 简单用例
+
+---
+
+If you have installed Selenium Python bindings, you can start using it from Python like this.
+
+如果你已经安装了Selenium Python包，你可以开始用Python使用它如下。
+
+---
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+phantomjs_path = r'D:\2017-02-22\desktop20170222\69xe\node_modules\phantomjs-2.1.1-windows\bin\phantomjs.exe'
+
+driver = webdriver.PhantomJS(executable_path=phantomjs_path)
+driver.get("http://www.python.org")
+assert "Python" in driver.title
+elem = driver.find_element_by_name("q")
+elem.clear()
+elem.send_keys("pycon")
+elem.send_keys(Keys.RETURN)
+assert "No results found." not in driver.page_source
+driver.close()	
+```	
+
+**笔者备注**：
+
+* 由于笔者安装的是PhontomJS作为浏览器的，所以并未修改了源码使用火狐的例子。
+
+
+
 
 </div>
     
