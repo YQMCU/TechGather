@@ -665,6 +665,105 @@ driver = webdriver.Remote(
 
 ---
 
+# 3. Navigating
+
+# 3. 导航
+
+---
+
+The first thing you’ll want to do with WebDriver is navigate to a link. The normal way to do this is by calling get method:
+
+你想要使用用网页驱动器的首先要做的是导向一个链接。通常的做法是调用`get`方法：
+
+	driver.get("http://www.google.com")
+
+---
+
+WebDriver will wait until the page has fully loaded (that is, the onload event has fired) before returning control to your test or script. It’s worth noting that if your page uses a lot of AJAX on load then WebDriver may not know when it has completely loaded. If you need to ensure such pages are fully loaded then you can use waits.
+
+网页驱动器将等到页面完全被加载（那样，`onload`事件被激活）后，返回控制给你的测试程序或者脚本。**如果你的页面在加载时使用了许多的AJAX是不值得的，这样的话驱动器可能不会知道它何时完全加载了**。如果你需要确保页面被完全加载，你可以使用[waits](http://selenium-python.readthedocs.io/waits.html#waits)
+
+---
+
+## 3.1. Interacting with the page
+
+## 3.1  与页面交互
+
+---
+
+Just being able to go to places isn’t terribly useful. What we’d really like to do is to interact with the pages, or, more specifically, the HTML elements within a page. First of all, we need to find one. WebDriver offers a number of ways to find elements. For example, given an element defined as:
+
+仅仅只是可以到达某个地方还不是非常有用。我们真正喜欢的是和页面进行交互，或者，更特别的，和HTML元素进行交互。首先，我们需要发现一个元素。网页驱动器提供了一些方法去发现元素。例如，存在一个元素被这样定义：
+
+	英文速记 ： terribly : 非常，可怕的，极度的
+
+```html
+<input type="text" name="passwd" id="passwd-id" />
+```
+
+---
+
+you could find it using any of:
+
+你可以这样去找到它：
+
+```html
+element = driver.find_element_by_id("passwd-id")
+element = driver.find_element_by_name("passwd")
+element = driver.find_element_by_xpath("//input[@id='passwd-id']")
+```
+
+---
+
+You can also look for a link by its text, but be careful! The text must be an exact match! You should also be careful when using XPATH in WebDriver. If there’s more than one element that matches the query, then only the first will be returned. If nothing can be found, a NoSuchElementException will be raised.
+
+你也可以通过文本内容去寻找一个链接，但是要小心。这个文本必须完全匹配！你也要在网页驱动器中小心地使用`XPATH`语法。如果有不止一个元素匹配查询条件，然后只有第一个被返回。如果什么都没找到，将有一个`NoSuchElementException`异常出现。
+
+---
+
+WebDriver has an “Object-based” API; we represent all types of elements using the same interface. This means that although you may see a lot of possible methods you could invoke when you hit your IDE’s auto-complete key combination, not all of them will make sense or be valid. Don’t worry! WebDriver will attempt to do the Right Thing, and if you call a method that makes no sense (“setSelected()” on a “meta” tag, for example) an exception will be raised.
+
+网页驱动器有一个基于对象的API，我们用相同的接口表现所有的元素。这意味着尽管你可以看到在你点击IDE的自动完成组合件的时候，很多可能的方法被调用，但并不是所有的都有意义或者有效。别担心，网页驱动器将试图去做正确的事，如果你调用一个方法没有意义(譬如，`setSelected`方法，在一个`meta`标签中)，他会抛出一个异常。
+
+
+	英文速记 ： 
+		represent ： 代表，表现，描绘，回忆，再赠送
+		make sense ： 有意义
+		make no sense ： 无意义
+		exception be raised ： 抛出异常
+
+---
+
+So, you’ve got an element. What can you do with it? First of all, you may want to enter some text into a text field:
+
+如此，你可以获得一个元素。你可以用它做什么呢？首先，你可能想要输入一些文本在文本域中。
+
+	element.send_keys("some text")
+
+---
+
+You can simulate pressing the arrow keys by using the “Keys” class:
+
+你可以使用`Keys`类来模拟按箭头键：
+
+	element.send_keys(" and some",Keys.ARROW_DOWN)
+
+---
+
+It is possible to call send_keys on any element, which makes it possible to test keyboard shortcuts such as those used on GMail. A side-effect of this is that typing something into a text field won’t automatically clear it. Instead, what you type will be appended to what’s already there. You can easily clear the contents of a text field or textarea with clear method:
+
+可以调用元素的`send_keys`方法，比如使用GMail的时候使得它可以测试键盘快捷键。一个副作用是输入进入输入框中的内容不会自动清除。取而代之，你输入的内容会追加到已经存在的内容中。你可以很容易地使用`clear`方法清理输入框中的或者文本域的内容。
+
+	英文速记 ： side-effect ： 副作用，附带效果
+
+```
+element.clear()
+```
+
+---
+
+
+
 </div>
     
 <script src="https://YQMCU.github.io/books_study/scripts/markdown_parse.js" type="text/javascript"></script>
