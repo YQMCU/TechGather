@@ -762,7 +762,116 @@ element.clear()
 
 ---
 
+## 3.2. Filling in forms
 
+## 3.2  填写表单
+
+---
+
+We’ve already seen how to enter text into a textarea or text field, but what about the other elements? You can “toggle” the state of drop down, and you can use “setSelected” to set something like an OPTION tag selected. Dealing with SELECT tags isn’t too bad:
+
+我们已经看过如何输入文本到文本域或者输入框中，但是对于其他元素呢？你可以翻转`drop down`状态，你可以使用`setSelected`方法设置例如`OPTION`标签被选中属性。处理`SELECT`标签不是太糟糕：
+
+```python
+element = driver.find_element_by_xpath("//select[@name='name']")
+all_options = element.find_elements_by_tag_name("option")
+for option in all_options:
+    print("Value is: %s" % option.get_attribute("value"))
+    option.click()
+```
+
+
+
+
+---
+
+This will find the first “SELECT” element on the page, and cycle through each of it’s OPTIONs in turn, printing out their values, and selecting each in turn.
+
+你会发现首先找到页面中的`SELECT`元素，在返回值中遍历它的每个`OPTION`子元素，打印出它们的值，以及依次选中它们。
+
+---
+
+As you can see, this isn’t the most efficient way of dealing with SELECT elements . WebDriver’s support classes include one called “Select”, which provides useful methods for interacting with these:
+
+如你所见，这不是最有效的方式处理`SELECT`元素。网页驱动器支持类其中有一个被叫做`select`，它能提供与这些交互的有用方法。
+
+```python
+from selenium.webdriver.support.ui import Select
+select = Select(driver.find_element_by_name('name'))
+select.select_by_index(index)
+select.select_by_visible_text("text")
+select.select_by_value(value)
+```
+
+---
+
+WebDriver also provides features for deselecting all the selected options:
+
+网页驱动器也提供一些取消选择选项的功能：
+
+	英文速记 ： deselect ： 取消选择
+
+```python
+select = Select(driver.find_element_by_id('id'))
+select.deselect_all()
+```
+
+---
+
+This will deselect all OPTIONs from the first SELECT on the page.
+
+这样将从开始找到的页面中的`SELECT`中全部取消选项。
+
+---
+
+Suppose in a test, we need the list of all default selected options, Select class provides a property method that returns a list:
+
+假设在一个测试中，我们需要所有默认被选中的选项的列表，`Select`类提供了一个返回一个列表的属性方法。
+
+	英文速记 ： suppose ： 假设，认为
+
+```python
+select = Select(driver.find_element_by_xpath("xpath"))
+all_selected_options = select.all_selected_options
+```
+
+---
+
+To get all available options:
+
+获取所有有效选项：
+
+	英文速记 ： available ： 可用的，有效的
+
+```python
+options = select.options
+```
+
+---
+
+Once you've finished filling out the form, you probably want to submit it. One way to do this would be to find the “submit” button and click it:
+
+一旦你已经完成了填写表单，你可能想要去提交它。一种提交方法是找到`submit`提交按钮，并且点击它：
+
+```python
+# Assume the button has the ID "submit" :)
+# 假设这个按钮ID="submit"
+driver.find_element_by_id("submit").click()
+```
+
+---
+
+Alternatively, WebDriver has the convenience method “submit” on every element. If you call this on an element within a form, WebDriver will walk up the DOM until it finds the enclosing form and then calls submit on that. If the element isn’t in a form, then the NoSuchElementException will be raised:
+
+或者，网页驱动器的每个元素都有方便的`submit`方法。如果你在一个表单中调用了这个方法，网页驱动器将遍历这个DOM直到它找完表单然后调用`submit`提交表单。如果这个元素不在这个表单中，会抛出`NoSuchElementException`异常。
+
+	英文速记 ： 
+		alternatively ： 二者选一的
+		enclose ： 围绕，装入
+
+```python
+element.submit()
+```
 
 </div>
     
