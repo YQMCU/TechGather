@@ -23,4 +23,7 @@ DGXUE.COM是个专注提供免费电工知识教程的网站，您可通过这�
 
 ---
 
-new4
+《Think Python 2e》最新版中文翻译 — 《Think Python 2e》中译本 1.0 文档
+[http://www.codingpy.com/books/thinkpython2/index.html](http://www.codingpy.com/books/thinkpython2/index.html)
+
+---
