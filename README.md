@@ -24,6 +24,27 @@ DGXUE.COM是个专注提供免费电工知识教程的网站，您可通过这�
 ---
 
 《Think Python 2e》最新版中文翻译 — 《Think Python 2e》中译本 1.0 文档
+
 [http://www.codingpy.com/books/thinkpython2/index.html](http://www.codingpy.com/books/thinkpython2/index.html)
+
+---
+
+R语言图书、免费电子书 | 统计之都 | 统计之都 (中国统计学门户网站，免费统计学服务平台)
+
+[https://cos.name/books/](https://cos.name/books/)
+
+---
+
+Wolfram|Alpha: Computational Knowledge Engine
+
+科学数学工具
+
+[http://www.wolframalpha.com/](http://www.wolframalpha.com/)
+
+---
+
+国防科学技术大学公开课：数学建模——从自然走向理性之路_全9集_网易公开课
+
+[http://open.163.com/special/cuvocw/shuxuejianmo.html](http://open.163.com/special/cuvocw/shuxuejianmo.html)
 
 ---
