@@ -48,3 +48,13 @@ Wolfram|Alpha: Computational Knowledge Engine
 [http://open.163.com/special/cuvocw/shuxuejianmo.html](http://open.163.com/special/cuvocw/shuxuejianmo.html)
 
 ---
+
+【3d模型免费下载】,打造一流3dmax模型库_3d模型溜溜网 3d66.com
+[http://www.3d66.com/](http://www.3d66.com/)
+
+---
+
+Rhino（犀牛）3D打印交流—学犀牛中文网 xuexiniu.com -
+[http://3d.xuexiniu.com/](http://3d.xuexiniu.com/)
+
+---
