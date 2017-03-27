@@ -60,3 +60,12 @@ Rhino（犀牛）3D打印交流—学犀牛中文网 xuexiniu.com -
 [http://3d.xuexiniu.com/](http://3d.xuexiniu.com/)
 
 ---
+
+Thingiverse - Digital Designs for Physical Objects
+
+ThingIverse:3D艺术品模型展示平台是美国纽约MakerBot公司旗下的3D模型展示平台，展示设计师的3D艺术作品，MakerBot渴望用这种方法，让世界最广泛的人，接触到世界上最珍贵的那些艺术品。
+
+[http://www.thingiverse.com/](http://www.thingiverse.com/)
+
+---
+
