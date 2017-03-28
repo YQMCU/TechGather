@@ -69,3 +69,10 @@ ThingIverse:3D艺术品模型展示平台是美国纽约MakerBot公司旗下的3
 
 ---
 
+Raspberry Pi Zero 2020 mount #3DThursday #3DPrinting « Adafruit Industries – Makers, hackers, artists, designers and engineers!
+
+国外开源智能硬件平台
+
+[https://blog.adafruit.com/2017/03/23/raspberry-pi-zero-2020-mount-3dthursday-3dprinting/](https://blog.adafruit.com/2017/03/23/raspberry-pi-zero-2020-mount-3dthursday-3dprinting/)
+
+---
