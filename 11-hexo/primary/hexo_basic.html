@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hexo基础</title>
+</head>
+<body>
+    
+
+<div id="md-body">
+	
+---
+
+# 1. 初始化
+
+---
+
+安装好hexo之后，初始化hexo在&lt;folder&gt;文件夹中
+
+	hexo init folder
+
+若得到如下指令，就说明已经初始化成功.
+
+	INFO  Start blogging with Hexo!
+
+进入文件夹操作
+
+	cd folder
+	npm install
+
+文件结构如下:
+
+```cmd
+├── _config.yml
+├── package.json
+├── scaffolds
+├── source
+|   ├── _drafts
+|   └── _posts
+└── themes
+```
+
+## _config.yml
+
+站点配置文件
+
+## package.json
+
+应用数据。默认安装[EJS](http://embeddedjs.com/)(javascript模版引擎),[Stylus](http://learnboost.github.io/stylus/)(css预处理)和[Markdown](http://daringfireball.net/projects/markdown/)渲染器。可以之后卸载他们。
+
+```json
+package.json
+
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "hexo": {
+    "version": ""
+  },
+  "dependencies": {
+    "hexo": "^3.2.0",
+    "hexo-generator-archive": "^0.1.4",
+    "hexo-generator-category": "^0.1.3",
+    "hexo-generator-index": "^0.2.0",
+    "hexo-generator-tag": "^0.2.0",
+    "hexo-renderer-ejs": "^0.2.0",
+    "hexo-renderer-stylus": "^0.3.1",
+    "hexo-renderer-marked": "^0.2.10",
+    "hexo-server": "^0.2.0"
+  }
+}
+```
+
+## scaffolds
+
+脚手架，博客的创建由此作为模版。
+
+## source
+
+源文件文件夹。用于放置站点内容。
+
+Hexo不理会隐藏文件或者文件夹，也不理会带有`_`前缀的文件或者文件夹。
+
+可被编译和渲染的文件(诸如：html,markdown文件)将被编译后放入`public`文件夹，而其他文件直接复制到文件夹中。
+
+## themes
+
+主题文件夹。Hexo产生混合了内容和主题的静态站点。
+
+
+---
+
+# 2. 配置
+
+---
+
+```
+_config.yml
+
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Hexo
+subtitle:
+description:
+author: John Doe
+language:
+timezone:
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://yoursite.com
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: landscape
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type:
+```
+
+剖析文件
+
+## Site 站点
+
+|设置|描述|
+|:--:|:--:|
+|title|站点标题|
+|subtitle|子标题|
+|description|站点描述|
+|author|作者|
+|language|语言(使用[2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)编码规范，默认是en，中文用zh)|
+|timezone|时区|
+
+
+## URL 地址
+
+|设置|描述|默认值|
+|:-:|:-:|
+|url|站点的URL地址||
+|root|站点根目录||
+|permalink|文章的链接格式|:year/:month/:day/:title/|
+|permalink_defaults|链接格式中的每段的默认值||
+
+---
+
+站点在子目录下的例子：
+
+如果站点在子目录中，诸如`http://example.com/blog`，设置`url`为`http://example.com`，设置root为`/blog/`
+
+
+## Directory 路径
+
+|设置|描述|默认值|
+|:--:|:--:|:--:|
+|source_dir|资源文件夹，存储了站点内容|source|
+|public_dir|公共文件夹，静态站点生成文件夹|public|
+|tag_dir|标签文件夹|tags|
+|archive_dir|归档文件夹|archives|
+|category_dir|分类文件夹|categories|
+|code_dir|代码文件夹|downloads/code|
+|i18n_dir|国际化文件夹|:lang|
+|skip_render|不想要被渲染的路径，可以使用[glob expressions](https://github.com/isaacs/minimatch)(一种类正则表达式的匹配表达式)匹配路径||
+
+
+## Writing 书写
+
+|设置|描述|默认值|
+|:---:|-:|:---:|
+|new_post_name|新帖子的文件名|:title.md|
+|default_layout|默认布局|post|
+|titlecase|改变标题为标题案例|false|
+|external_link|打开新tab页|true|
+|filename_case|改变文件名为1个小写字母，2个大写字母|0|
+|render_drafts|渲染草稿|false|
+|post_asset_folder|使能资源文件夹[Asset Folder](https://hexo.io/docs/asset-folders.html)|false|
+|relative_link|创建相对根目录的链接|false|
+|future|显示未来帖子|true|
+|highlight|代码块设置|
+
+## Category & Tag  类别和标签
+
+|设置|描述|默认值|
+|:-:|:-:|:-:|
+|default_category|默认分类|uncategorized|
+|category_map|分类slugs|
+|tag_map|标签slugs|
+
+## Date/Time format 日期/时间格式
+
+Hexo使用[moment.js](http://momentjs.com/)处理日期
+
+|设置|描述|默认值|
+|:-:|:-:|:-:|
+|date_format|日期格式|YYYY-MM-DD|
+|time_format|时间格式|HH:mm:ss|
+
+## Pagination 分页
+
+|设置|描述|默认值|
+|:-:|:-:|:-:|
+|per_page|单页显示帖子的数量(0表示禁止分页)|10|
+|pagination_dir|分页目录|page|
+
+## Extensions 扩展
+
+|设置|描述|
+|:-:|:-:|
+|theme|主题名称,false禁止主题|
+|deploy|部署设置|
+
+
+## 使用其他配置
+
+可以选择在命令行中`hexo`加`--config`的方式来使用其他配置文件，配置文件的格式可以是`.yml`(YAML)或者`.json`(JSON)
+
+```cmd
+
+# use 'custom.yml' in place of '_config.yml'
+$ hexo server --config custom.yml
+
+# use 'custom.yml' and 'custom2.json', prioritizing 'custom2.json'
+$ hexo server --config custom.yml,custom2.json
+
+```
+
+---
+
+# 3. 操作命令
+
+---
+
+## init 
+
+    hexo init [folder]
+
+初始化一个站点，如果不提供`folder`，hexo将在当前路径创建站点。
+
+## new
+
+    hexo new [layout] <title>
+
+创建一篇文章，如果没有`layout`提供，hexo将使用`_config.yml`中的`default_layout`。如果title有空格，需要用引号引起来。
+
+## generate
+
+    hexo generate
+
+产生静态文件。
+
+|可选参数|描述|
+|:--:|:--:|
+|-d,--deploy|生成完成后部署|
+|-w,--watch|观察文件的改变|
+
+## publish
+
+    hexo publish [layout] <filename>
+
+发布一篇草稿
+
+## server
+
+    hexo server
+
+启动本地服务。默认的地址`http://localhost:4000/`
+
+|可选参数|描述|
+|:--:|:--:|
+|-p,--port|覆写默认端口号|
+|-s,--static|仅仅启动静态文件|
+|-l,--log|使能日志记录，覆写日志格式|
+
+
+## deploy
+
+    hexo deploy
+
+部署你的站点
+
+|可选参数|描述|
+|:---:|:---:|
+|-g,--generate|部署前生成静态文件|
+
+## render
+
+    hexo render <file1> [file2] ...
+
+渲染文件。
+
+|可选参数|描述|
+|:---:|:---:|
+|-o,--output|输出目标路径|
+
+## [migrate](https://hexo.io/docs/migration.html)
+
+    hexo migrate <type>
+
+从其他博客系统中迁移内容。
+
+迁移功能支持`RSS`,`Jekyll`,`Octopress`,`WordPress`,`Joomla`。
+
+## list 
+
+    hexo list <type>
+
+罗列出所有的路径。
+
+## version
+
+    hexo version
+
+查看hexo版本信息。
+
+## 选项
+
+### 安全模式
+
+    hexo --safe
+
+禁止载入插件和脚本。当你安装了一个新插件后遇到问题时可以尝试安全模式。
+
+### 调试模式
+
+    hexo --debug
+
+在终端记录冗长的信息并保存到`debug.log`中。当你使用Hexo遇到任何问题时候都可以使用。
+
+如果你看到错误，可以将问题提交给[GitHub issue](https://github.com/hexojs/hexo/issues/new).
+
+### 静默模式
+
+    hexo --silent
+
+终端静默输出。
+
+### 自定义配置文件路径
+
+    hexo --config custom.yml
+
+使用自定义配置文件(代替`_config.yml`)。
+
+也可以接受分开的配置文件列表(中间没有空格),并合并这些文件到一个单独的`_multiconfig.yml`文件中。
+
+    hexo --config custom.yml,custom2.json
+
+### 显示草稿
+
+    hexo --draft
+
+显示保存在`source/_drafts`文件夹中的草稿。
+
+### 自定义当前工作路径
+
+    hexo --cwd /path/to/cwd
+
+CWD(current working directory) 
+
+</div>
+
+
+
+<script src="https://YQMCU.github.io/books_study/scripts/markdown_parse.js" type="text/javascript"></script>
+
+<!-- <script src="http://localhost:8088\books_study\scripts\markdown_parse.js" type="text/javascript"></script> -->
+
+<!-- 
+<script type="text/javascript">
+	var s = document.createElement("script");
+	if(window.navigator.onLine){
+		s.src = "https://YQMCU.github.io/books_study/scripts/markdown_parse.js";
+	}else{
+		s.src = "localhost:8088\books_study\scripts\markdown_parse.js"
+	}
+	document.body.insertBefore(s,document.getElementsByTagName("script")[0]);
+</script>
+ -->
+
+</body>
+</html>
