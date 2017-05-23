@@ -70,14 +70,20 @@ ThingIverse:3D艺术品模型展示平台是美国纽约MakerBot公司旗下的3
 ---
 
 GrabCAD
-https://grabcad.com/
+
 全球最大的机械资源社区平台
+
+https://grabcad.com/
+
 
 ---
 
 Instructables - How to make anything
-https://www.instructables.com/
+
 DIY设计网站 从美食到3D打印，只有想不到，没有不可造
+
+https://www.instructables.com/
+
 
 ---
 
