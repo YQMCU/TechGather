@@ -69,6 +69,18 @@ ThingIverse:3D艺术品模型展示平台是美国纽约MakerBot公司旗下的3
 
 ---
 
+GrabCAD
+https://grabcad.com/
+全球最大的机械资源社区平台
+
+---
+
+Instructables - How to make anything
+https://www.instructables.com/
+DIY设计网站 从美食到3D打印，只有想不到，没有不可造
+
+---
+
 Raspberry Pi Zero 2020 mount #3DThursday #3DPrinting « Adafruit Industries – Makers, hackers, artists, designers and engineers!
 
 国外开源智能硬件平台
