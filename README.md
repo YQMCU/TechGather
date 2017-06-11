@@ -94,3 +94,9 @@ Raspberry Pi Zero 2020 mount #3DThursday #3DPrinting « Adafruit Industries – 
 [https://blog.adafruit.com/2017/03/23/raspberry-pi-zero-2020-mount-3dthursday-3dprinting/](https://blog.adafruit.com/2017/03/23/raspberry-pi-zero-2020-mount-3dthursday-3dprinting/)
 
 ---
+
+从零开始nodejs系列文章 | 粉丝日志
+
+http://blog.fens.me/series-nodejs/
+
+---
