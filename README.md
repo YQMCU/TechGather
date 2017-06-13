@@ -100,3 +100,9 @@ Raspberry Pi Zero 2020 mount #3DThursday #3DPrinting « Adafruit Industries – 
 http://blog.fens.me/series-nodejs/
 
 ---
+
+树莓派 - 物联网 IoT 经验分享小站 - 博客频道 - CSDN.NET
+
+http://blog.csdn.net/xukai871105/article/category/1436049/3
+
+---
