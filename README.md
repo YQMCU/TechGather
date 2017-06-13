@@ -106,3 +106,9 @@ http://blog.fens.me/series-nodejs/
 http://blog.csdn.net/xukai871105/article/category/1436049/3
 
 ---
+
+Python爬虫学习系列教程 | 静觅
+
+http://cuiqingcai.com/1052.html
+
+---
