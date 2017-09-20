@@ -112,3 +112,13 @@ Python爬虫学习系列教程 | 静觅
 http://cuiqingcai.com/1052.html
 
 ---
+
+计算机开放电子书 - 坚果云 - 云盘|网盘|企业网盘|同步|备份|无限空间|免费网络硬盘|企业云盘
+
+https://www.jianguoyun.com/p/Dd8libYQyIybBhizxiU
+
+计算机电子书
+
+http://it-ebooks.flygon.net/
+
+---
