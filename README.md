@@ -1,6 +1,10 @@
 # TechGather
 
 ---
+
+C基础 time.h 简单思路扩展 - 喜欢兰花山丘 - 博客园
+http://www.cnblogs.com/life2refuel/p/8545842.html#3923837
+
 ---
 
 HTML5资源教程 | 分享HTML5开发资源和开发教程
