@@ -2,6 +2,11 @@
 
 ---
 
+microsoft visual c++ all version
+https://www.itechtics.com/microsoft-visual-c-redistributable-versions-direct-download-links/#Microsoft_Visual_C_Redistributable_2010
+
+---
+
 C基础 time.h 简单思路扩展 - 喜欢兰花山丘 - 博客园
 http://www.cnblogs.com/life2refuel/p/8545842.html#3923837
 
