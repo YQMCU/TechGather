@@ -2,7 +2,29 @@
 
 ---
 
+jQuery技术相关 - SegmentFault 思否
+
+https://segmentfault.com/bookmark/1230000002226954
+
+
+---
+
+详解 JS 系列 - SegmentFault 思否
+
+https://segmentfault.com/bookmark/1230000002226575
+
+
+---
+
+JavaScript学习总结 - SegmentFault 思否
+
+https://segmentfault.com/bookmark/1230000002226470
+
+
+---
+
 microsoft visual c++ all version
+
 https://www.itechtics.com/microsoft-visual-c-redistributable-versions-direct-download-links/#Microsoft_Visual_C_Redistributable_2010
 
 ---
