@@ -2,7 +2,14 @@
 
 ---
 
+justjavac/free-programming-books-zh_CN: 免费的计算机编程类中文书籍，欢迎投稿
+
+https://github.com/justjavac/free-programming-books-zh_CN
+
+---
+
 一个合格的程序员应该读过哪些书 - justjavac(迷渡)
+
 http://justjavac.com/other/2012/05/15/qualified-programmer-should-read-what-books.html
 
 ---
