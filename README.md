@@ -2,6 +2,11 @@
 
 ---
 
+一个合格的程序员应该读过哪些书 - justjavac(迷渡)
+http://justjavac.com/other/2012/05/15/qualified-programmer-should-read-what-books.html
+
+---
+
 jQuery技术相关 - SegmentFault 思否
 
 https://segmentfault.com/bookmark/1230000002226954
