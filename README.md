@@ -2,6 +2,12 @@
 
 ---
 
+大约10G多的哲学书资源：
+
+链接:https://pan.baidu.com/s/1fpgFyCoAe_MBBHrj3R5MbQ  密码:80ld
+
+---
+
 我的小书屋-最新最全电子书免费下载
 
 http://mebook.cc/
