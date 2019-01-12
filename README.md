@@ -2,6 +2,12 @@
 
 ---
 
+Free Tools for Testing Communication Protocols – Control + S
+
+https://ricolsen1supervc.wordpress.com/2017/07/01/free-tools-for-testing-communication-protocols/
+
+---
+
 selenium 免费教程 网站中也含有其他的测试自动化，bug管理等软件的教程
 
 Selenium Tutorials 31+ Best Free Selenium Training Tutorials
