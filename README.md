@@ -2,6 +2,16 @@
 
 ---
 
+IT书籍下载 -- 英文版本 -- 免费下载
+
+http://www.allitbooks.com
+
+Pro Vue.js 2 - pdf - Free IT eBooks Download
+
+http://www.allitebooks.com/pro-vue-js-2/
+
+---
+
 蚂蚁部落 - 前端教程 - Git 教程
 
 http://www.softwhy.com/qiduan/git_course/
