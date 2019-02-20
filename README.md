@@ -2,6 +2,12 @@
 
 ---
 
+背景图片下载 -- 各种尺寸 免费 适合GUI开发
+
+http://wallpaperswide.com/
+
+---
+
 IT书籍下载 -- 英文版本 -- 免费下载
 
 http://www.allitbooks.com
