@@ -2,6 +2,18 @@
 
 ---
 
+在线 Markdown 编辑器 轻量 支持画流程图 表格 公式 等扩展功能 
+
+https://stackedit.io/app#
+
+---
+
+mermaid · GitBook - 画流程图软件 - Markdown插件
+
+https://mermaidjs.github.io/
+
+---
+
 云盘万能钥匙 - 你的云盘智能助手 - 度娘分享
 
 https://ypsuperkey.meek.com.cn/
