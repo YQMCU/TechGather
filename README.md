@@ -2,6 +2,12 @@
 
 ---
 
+The Modern Javascript Tutorial - Javascript 教程 - 关注 Javascript 技术传播
+
+https://javascript.info/
+
+---
+
 Open Source: 2018 - Java/C++/Python/BigData/Android/ - IT技术教程 干货
 
 https://www.bogotobogo.com/
