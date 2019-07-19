@@ -2,7 +2,15 @@
 
 ---
 
-Motrix - 清爽开源免费的全能下载工具 (跨平台、支持 BT / 磁力链 / 百度网盘) - 异次元软件世界
+Python Extension Packages for Windows - Christoph Gohlke
+
+https://www.lfd.uci.edu/~gohlke/pythonlibs/
+
+Unofficial Windows Binaries for Python Extension Packages 非官方
+
+---
+
+Motrix - 清爽开源免费的全能下载工具 (跨平台、支持 BT / 磁力链 / 百度网盘) - 异次元软件世界 (测试不可用，可能有问题)
 
 https://www.iplaysoft.com/motrix.html
 
