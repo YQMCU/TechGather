@@ -2,6 +2,18 @@
 
 ---
 
+【色卡】常用色谱简析，中国传统颜色卡，代码附RBG，HC_穿膛_新浪博客
+
+http://blog.sina.com.cn/s/blog_5c3b139d0101deia.html
+
+银白 - 中国传统颜色手册 | Chinese Color Cheatsheet
+
+https://colors.ichuantong.cn/
+
+中国古典颜色卡
+
+---
+
 Python Example (Program Creek)  各种代码应用示例， 主要是Python
 
 https://www.programcreek.com/python/
