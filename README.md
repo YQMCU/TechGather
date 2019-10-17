@@ -2,6 +2,16 @@
 
 ---
 
+svelte_一个神奇的用户界面框架
+
+http://www.fly63.com/nav/969
+
+前端导航网站,介绍各种库，框架
+
+http://www.fly63.com/nav/
+
+---
+
 【色卡】常用色谱简析，中国传统颜色卡，代码附RBG，HC_穿膛_新浪博客
 
 http://blog.sina.com.cn/s/blog_5c3b139d0101deia.html
