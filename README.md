@@ -2,6 +2,14 @@
 
 ---
 
+50+ C/C++ Projects with Source Code | Code with C
+
+https://www.codewithc.com/c-projects-with-source-code/
+
+https://www.codewithc.com 一个专注于编程的技术讨论，论坛，英文； 主要是C语言系列
+
+---
+
 svelte_一个神奇的用户界面框架
 
 http://www.fly63.com/nav/969
