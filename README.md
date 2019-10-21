@@ -2,6 +2,12 @@
 
 ---
 
+科学研究软件小站 - 英语学习分享资料
+
+https://www.sciencesoft.cn/must-installed-software-for-a-researcher/
+
+---
+
 50+ C/C++ Projects with Source Code | Code with C
 
 https://www.codewithc.com/c-projects-with-source-code/
