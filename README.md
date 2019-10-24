@@ -2,6 +2,18 @@
 
 ---
 
+Free Online IDE and Terminal | 一系列在线执行代码的平台 包括 js Jquery Redis C/C++ Java 等
+
+https://www.tutorialspoint.com/codingground.htm
+
+---
+
+Techie Delight - Coding made easy 一个关于C/C++语言和算法的博客 - 技术文章
+
+https://www.techiedelight.com/
+
+---
+
 科学研究软件小站 - 英语学习分享资料
 
 https://www.sciencesoft.cn/must-installed-software-for-a-researcher/
