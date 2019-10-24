@@ -2,6 +2,12 @@
 
 ---
 
+CodingUnit Programming Tutorials  - C/PHP/OpenGL 等教程 ； web新闻资讯等；一个专注于教程的博客；分类清晰
+
+https://www.codingunit.com/
+
+---
+
 Free Online IDE and Terminal | 一系列在线执行代码的平台 包括 js Jquery Redis C/C++ Java 等
 
 https://www.tutorialspoint.com/codingground.htm
@@ -11,6 +17,10 @@ https://www.tutorialspoint.com/codingground.htm
 Techie Delight - Coding made easy 一个关于C/C++语言和算法的博客 - 技术文章
 
 https://www.techiedelight.com/
+
+C++ Programming Language - GeeksforGeeks -- 一个极客网站，拥有很多教程tutorials，博客帖子，并且涵盖多分类 - 强烈推荐
+
+https://www.geeksforgeeks.org/c-plus-plus/
 
 ---
 
