@@ -2,6 +2,18 @@
 
 ---
 
+VB编程指导
+
+API手册 - 索引 - VB爱好者乐园(VBGood) - 关于VB的经验,电子教程,代码,控件,论坛,博客,微博等.
+
+http://www.vbgood.com/api.html
+
+Windows API Guide: Reference - Window API 指南
+
+http://www.jasinskionline.com/WindowsApi/ref/
+
+---
+
 CodingUnit Programming Tutorials  - C/PHP/OpenGL 等教程 ； web新闻资讯等；一个专注于教程的博客；分类清晰
 
 https://www.codingunit.com/
