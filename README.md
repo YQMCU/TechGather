@@ -2,6 +2,20 @@
 
 ---
 
+开源项目搜索站
+
+https://www.findbestopensource.com
+
+https://awesomeopensource.com/
+
+---
+
+CPP 开源项目集锦
+
+https://github.com/fffaraz/awesome-cpp
+
+---
+
 VB编程指导
 
 API手册 - 索引 - VB爱好者乐园(VBGood) - 关于VB的经验,电子教程,代码,控件,论坛,博客,微博等.
