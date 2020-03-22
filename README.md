@@ -2,6 +2,30 @@
 
 ---
 
+电子书搜索网站 快准狠
+
+http://lib.gen  Library Genesis  http://gen.lib.rus.ec/ 
+
+网盘搜索-小白盘  https://www.xiaobaipan.com/
+
+Jiumo Search 鸠摩搜索 - 文档搜索引擎 https://www.jiumodiary.com/
+
+---
+
+  -- BAI PIAO影视 系列 -- 
+
+菜鸟到高手通过磁力链接一步步看尽天下影视剧/动漫/游戏等（精修版） - 简书 https://www.jianshu.com/p/22d88a707b27
+
+cocook全網影視搜索 - 最全 最快 影視搜索引擎 https://search.cocook.cn/
+
+低端影视 - 超清在线视频站  https://ddrk.me/
+
+菜鸟到高手通过磁力链接一步步看尽天下影视剧/动漫/游戏等（精修版） - 简书  https://www.jianshu.com/p/22d88a707b27
+
+吉吉影音_最新电影_好看的电视剧_吉吉影院 https://www.jjvcd.com/
+
+---
+
 码农书籍下载站 密码在查看源代码中
 
 https://www.xz577.com/e/288.html
@@ -212,7 +236,7 @@ https://www.softwaretestinghelp.com/selenium-tutorial-1/
 
 机器学习全流程项目实战视频
 
-网盘地址：https://pan.baidu.com/s/1BLFXWHQz5wd-4T3nrAfgDw 提取码: bkj9
+网盘地址： 提取码: bkj9
 
 ---
 
@@ -232,7 +256,7 @@ Mongoose - GitHub's most popular embedded web server
 
 大约10G多的哲学书资源：
 
-链接:https://pan.baidu.com/s/1fpgFyCoAe_MBBHrj3R5MbQ  密码:80ld
+链接:  密码:80ld
 
 ---
 
