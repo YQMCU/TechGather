@@ -2,6 +2,14 @@
 
 ---
 
+https://music.hwkxk.cn/  音乐下载站
+
+Listen 1 音乐播放器  http://listen1.github.io/listen1/
+
+Flash Video Downloader - 音视频抓包 Download https://flash-video-downloader.en.softonic.com/
+
+---
+
 电子书搜索网站 快准狠
 
 http://lib.gen  Library Genesis  http://gen.lib.rus.ec/ 
