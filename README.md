@@ -2,6 +2,10 @@
 
 ---
 
+CRC（循环冗余校验）在线计算_ip33.com http://www.ip33.com/crc.html
+
+---
+
 https://music.hwkxk.cn/  音乐下载站
 
 Listen 1 音乐播放器  http://listen1.github.io/listen1/
