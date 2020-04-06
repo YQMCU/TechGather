@@ -2,6 +2,14 @@
 
 ---
 
+第三电子书网Dzs3.com https://www.dzs3.com/
+
+三叶资源网-为编程爱好者分享易语言教程源码的资源网 http://www.sanye.cx/
+
+安然工具网-大家的工具网 https://anran.gs/
+
+---
+
 CRC（循环冗余校验）在线计算_ip33.com http://www.ip33.com/crc.html
 
 ---
