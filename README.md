@@ -2,6 +2,14 @@
 
 ---
 
+https://dalipan.com 大力盘搜索
+
+https://www.programiz.com/dsa Learn DS & Algorithms | Programiz - 编程教程网站
+
+http://codingdict.com/sources/py/greenlet/15253.html - Python greenlet 模块，getcurrent() 实例源码 - 编程字典 类似于 program creek
+
+---
+
 第三电子书网Dzs3.com https://www.dzs3.com/
 
 三叶资源网-为编程爱好者分享易语言教程源码的资源网 http://www.sanye.cx/
