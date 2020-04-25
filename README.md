@@ -2,6 +2,20 @@
 
 ---
 
+https://hao.su/2459/ 谷歌浏览器扩展crx下载 - 不死鸟 - 分享为王
+
+https://hao.su/531/?from=dalao.ru 免费的在线影视网站汇总 - 不死鸟 - 分享为王
+
+https://dalao.ru/ 大佬导航 - 好用的工具下载 链接 磁力链 等
+
+https://chrome.zzzmh.cn/ - 极简插件_Chrome扩展插件商店_优质crx应用
+
+https://pictureknow.com/extensions - 收藏猫 | Chrome插件,Chrome扩展,Chrome商店,谷歌浏览器插件下载,谷歌商店,安装教程
+
+https://hao.su/ 每日分享 稀奇古怪的东西
+
+---
+
 https://dalipan.com 大力盘搜索
 
 https://www.programiz.com/dsa Learn DS & Algorithms | Programiz - 编程教程网站
