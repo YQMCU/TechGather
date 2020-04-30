@@ -2,6 +2,12 @@
 
 ---
 
+ubuntu | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror
+
+https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
+
+---
+
 https://hao.su/2459/ 谷歌浏览器扩展crx下载 - 不死鸟 - 分享为王
 
 https://hao.su/531/?from=dalao.ru 免费的在线影视网站汇总 - 不死鸟 - 分享为王
