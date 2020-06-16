@@ -4,7 +4,7 @@
 
 http://c.biancheng.net/cpp/html/3030.html C语言中文网 一个简单的Linux下的socket程序_C语言中文网
 
-Linux命令大全(手册)_Linux常用命令行实例详解_Linux命令学习手册 https://man.linuxde.net/
+https://man.linuxde.net/ Linux命令大全(手册)_Linux常用命令行实例详解_Linux命令学习手册
 
 机器学习文档小组 ApacheCN http://apachecn.org/
 
