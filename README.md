@@ -2,6 +2,16 @@
 
 ---
 
+Github下载服务站
+
+Githubd  https://githubd.com/#/
+
+GitHub代下载服务·永久免费 http://g.widyun.com/
+
+代下载zip,apk等 https://d.serctl.com/
+
+---
+
 http://c.biancheng.net/cpp/html/3030.html C语言中文网 一个简单的Linux下的socket程序_C语言中文网
 
 https://man.linuxde.net/ Linux命令大全(手册)_Linux常用命令行实例详解_Linux命令学习手册
