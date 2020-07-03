@@ -2,6 +2,22 @@
 
 ---
 
+嵌入式相关资源
+
+嵌入式 Linux 知识库简介 https://cntofu.com/book/45/readme.html
+
+Linux 内核揭密 https://cntofu.com/book/114/index.html
+
+六、最好的机器学习资源-写给人类的机器学习 https://cntofu.com/book/128/6.md
+
+简介 · Shell 编程范例  https://tinylab.gitbooks.io/shellbook/
+
+30秒学会常用JavaScript代码 https://cntofu.com/book/176/README.md
+
+简体中文-命令行的艺术(The Art of Command Line) https://cntofu.com/book/181/README-zh.md
+
+---
+
 Github下载服务站
 
 Githubd  https://githubd.com/#/
