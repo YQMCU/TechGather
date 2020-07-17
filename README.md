@@ -2,6 +2,10 @@
 
 ---
 
+[转]awsome c++ - weiyinfu - 博客园 https://www.cnblogs.com/weiyinfu/p/11729725.html
+
+---
+
 嵌入式相关资源
 
 嵌入式 Linux 知识库简介 https://cntofu.com/book/45/readme.html
