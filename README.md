@@ -2,6 +2,12 @@
 
 ---
 
+《深度探索C++对象模型》PDF版本下载 - 小木人印象 下载电子书等 很方便 云盘下载
+
+http://www.xwood.net/_site_domain_/_root/5870/5930/5932/t_c264312.html
+
+---
+
 [转]awsome c++ - weiyinfu - 博客园 https://www.cnblogs.com/weiyinfu/p/11729725.html
 
 ---
