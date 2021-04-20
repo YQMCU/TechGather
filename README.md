@@ -2,6 +2,12 @@
 
 ---
 
+GitHub - ShanYonggang/spider_list: python爬虫及数据分析实战案例
+
+https://github.com/ShanYonggang/spider_list
+
+---
+
 ··················音视频开发学习·······················
 
 https://github.com.cnpmjs.org/ayyb1988/mediajourney
