@@ -2,6 +2,50 @@
 
 ---
 
+··················音视频开发学习·······················
+
+https://github.com.cnpmjs.org/ayyb1988/mediajourney
+
+音视频编解码:视频编解码基础1-FFmpeg结构与API摘要 - 简书
+
+https://www.jianshu.com/p/73645524ec81
+
+音视频开发之旅（30) -音视频基础知识 - 简书
+
+https://www.jianshu.com/p/a5ae12e37be7 yabin小站 - 简书 https://www.jianshu.com/u/f717b78f593b
+
+利用ffmpeg和opencv进行视频的解码播放 - 简书
+
+https://www.jianshu.com/p/6ef3c18d61b0
+
+图文详解YUV420数据格式 - azraelly - 博客园
+
+https://www.cnblogs.com/azraelly/archive/2013/01/01/2841269.html
+
+MPP-编码示例 - 为取经而来 - 博客园
+
+https://www.cnblogs.com/xue0708/p/10113302.html
+
+如何理解 YUV ？ - 知乎
+
+https://zhuanlan.zhihu.com/p/85620611
+
+YUV图解 （YUV444, YUV422, YUV420, YV12, NV12, NV21）_xjhhjx的专栏-CSDN博客_yuv420
+
+https://blog.csdn.net/xjhhjx/article/details/80291465
+
+··················瑞芯微 RK MPP·······················
+
+Toybrick-开源社区-人工智能-RK3399Pro入门教程（7）RTSP库的使用
+
+http://t.rock-chips.com/forum.php?mod=viewthread&tid=749
+
+RK的硬件编解码库mpp编程 - 瑞芯微Toybrick 开发板 - 深圳风火轮科技 - Powered by Discuz!
+
+http://arm-cn.com/thread-5236-1-1.html
+
+---
+
 《深度探索C++对象模型》PDF版本下载 - 小木人印象 下载电子书等 很方便 云盘下载
 
 http://www.xwood.net/_site_domain_/_root/5870/5930/5932/t_c264312.html
