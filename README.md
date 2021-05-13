@@ -2,6 +2,10 @@
 
 ---
 
+博文收藏: 解密C语言中的指针和内存泄漏，这些陷阱一定要避开！ - C语言编程学习基地 - 博客园 https://www.cnblogs.com/huya-edu/p/13878747.html
+
+---
+
 GitHub - ShanYonggang/spider_list: python爬虫及数据分析实战案例
 
 https://github.com/ShanYonggang/spider_list
