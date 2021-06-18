@@ -2,6 +2,16 @@
 
 ---
 
+
+https://reposhub.com/ 代码仓库 Reposhup
+
+https://www.xpcourse.com/c-programming-courses 编程教程课程网站
+
+一些关于 ffmpeg 音视频处理的 pdf 书籍仓库 https://github.com/mobinsheng/books/
+
+
+---
+
 工具： 在线查看代码的汇编情况，支持多种编译器的选择 https://godbolt.org/
 
 ---
