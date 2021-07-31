@@ -2,6 +2,10 @@
 
 ---
 
+树莓派OS历史镜像 http://downloads.raspberrypi.org/
+
+---
+
 
 https://reposhub.com/ 代码仓库 Reposhup
 
