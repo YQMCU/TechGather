@@ -8,6 +8,8 @@
 
 码农书籍网-IT书籍pdf推荐下载网站  https://www.manongbook.com/  PDF下载快 无需注册
 
+**资源很全，但解密需要付费**
+
 ---
 
 树莓派OS历史镜像 http://downloads.raspberrypi.org/
