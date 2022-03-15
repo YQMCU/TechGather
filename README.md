@@ -2,6 +2,10 @@
 
 ---
 
+Power's Wiki | Power's Wiki https://wiki-power.com/   一个Geeker的个人知识库
+
+---
+
 电子书下载网站 - 真下载 https://www.zhenxz.com/ zhen(真)x(下)z(载).com
 
 ---
