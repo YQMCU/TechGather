@@ -2,6 +2,18 @@
 
 ---
 
+国学自学网
+
+http://www.zxuew.cn/
+
+---
+
+Best Softwork or Book recommended  
+
+https://www.linuxlinks.com/excellent-free-books-learn-c-plus-plus/
+
+---
+
 《苏东坡传：几时归去 作个闲人》白落梅_珍藏版_PDF电子书免费下载 – 书行万里
 
 https://www.gpdf.net/33477.html  书行万里 一个PDF下载网站 下载输入密码 168168 没有任何套路可看
